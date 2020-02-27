@@ -3,25 +3,17 @@ const sqs = new AWS.SQS();
 
 exports.handler = async (event) => {
     try {
-        let data = await sqs.sendMessage({
+        let data = await sqs.deleteMessage({
             QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/indunil-message-queue`,
-            MessageBody: "Test from testcafe",
-            DelaySeconds: 0,
-            MessageAttributes: {
-                'x': {
-                    'DataType': "String",
-                    'StringValue': "1"
-                }
-            }
+            ReceiptHandle: "gt"
         }).promise();
-                console.log("data");
+        console.log("data");
                 console.log(data);
-
+                
     } catch (err) {
         // error handling goes here
                 console.log("err");
                 console.log(err);
-
     };
 
     return { "message": "Successfully executed" };
