@@ -21,7 +21,16 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "s3induniltrigger",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ],
         "testCases": {
           "624f8084-3bb6-49a0-8b34-26ddc6df19a6": {
             "id": "624f8084-3bb6-49a0-8b34-26ddc6df19a6",
@@ -57,6 +66,17 @@
           "maximumMessageSize": 256,
           "receiveMessageWaitTime": "0",
           "queueARN": "arn:aws:sqs:us-east-1:318300609668:indunil-message-queue"
+        }
+      },
+      "s3induniltrigger": {
+        "name": "s3induniltrigger",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "indunil.trigger"
+          }
         }
       }
     },
@@ -94,7 +114,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582801231908
+    "lastSave": 1582801460969
   },
   "VCS_STATE": {
     "provider": "GitHub",
