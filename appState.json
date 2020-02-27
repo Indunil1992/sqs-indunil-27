@@ -21,7 +21,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "apigusEast1sachithraAPIname1111get",
+            "config": {}
+          }
+        ],
         "testCases": {
           "624f8084-3bb6-49a0-8b34-26ddc6df19a6": {
             "id": "624f8084-3bb6-49a0-8b34-26ddc6df19a6",
@@ -60,21 +65,30 @@
           "proxyIntegration": false,
           "enableCORS": false,
           "stageMode": 1,
-          "stageName": "test112",
-          "stageDeploymentId": "tm038c",
+          "stageName": "test11",
+          "stageDeploymentId": "rmnizv",
           "mode": 1
         }
       },
-      "snsusEast1TestSNS": {
-        "name": "snsusEast1TestSNS",
-        "type": "SNS",
+      "sqsindunilMessageQueue": {
+        "name": "sqsindunilMessageQueue",
+        "type": "SQS",
         "config": {
-          "topicMode": 1,
-          "topicName": "TestSNS",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:TestSNS",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "subscriptions": []
+          "mode": 1,
+          "existing": true,
+          "name": "indunil-message-queue",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/indunil-message-queue",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "standardQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "345600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0",
+          "queueARN": "arn:aws:sqs:us-east-1:318300609668:indunil-message-queue"
         }
       }
     },
@@ -112,7 +126,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582806691007
+    "lastSave": 1582807025522
   },
   "VCS_STATE": {
     "provider": "GitHub",

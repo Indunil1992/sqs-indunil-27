@@ -1,10 +1,12 @@
 let AWS = require('aws-sdk');
-const sns = new AWS.SNS();
+const sqs = new AWS.SQS();
 
 exports.handler = async (event) => {
     try {
-        let data = await sns.unsubscribe({
-            SubscriptionArn: "arn:aws:sns:us-east-1:318300609668:TestSNS:bec16985-353e-42f0-8e40-952321c5e4fe"
+        let data = await sqs.sendMessage({
+            QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/indunil-message-queue`,
+            MessageBody: "sachii",
+            DelaySeconds: 0
         }).promise();
 
     } catch (err) {
