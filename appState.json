@@ -21,12 +21,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1sachithraAPIname1111get",
-            "config": {}
-          }
-        ],
+        "triggers": [],
         "testCases": {
           "624f8084-3bb6-49a0-8b34-26ddc6df19a6": {
             "id": "624f8084-3bb6-49a0-8b34-26ddc6df19a6",
@@ -43,33 +38,6 @@
     ],
     "currentFileId": "4d4e9fe3-6b87-40d4-b9b6-1eafcdccb2e6",
     "resources": {
-      "apigusEast1sachithraAPIname1111put": {
-        "name": "apigusEast1sachithraAPIname1111put",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "sachithraAPIname",
-          "apiId": "052p9kjn18",
-          "endpointType": "REGIONAL",
-          "rootResourceId": "zrjp6rdv3b",
-          "existingResources": {
-            "/1111": "0rjsnt",
-            "/": "zrjp6rdv3b"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/1111",
-          "resourceName": "1111",
-          "resourceId": "0rjsnt",
-          "restMethod": "PUT",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "test112",
-          "stageDeploymentId": "tm038c",
-          "mode": 1
-        }
-      },
       "apigusEast1sachithraAPIname1111get": {
         "name": "apigusEast1sachithraAPIname1111get",
         "type": "API_GATEWAY",
@@ -97,39 +65,16 @@
           "mode": 1
         }
       },
-      "ddbhirutest": {
-        "name": "ddbhirutest",
-        "type": "DynamoDB",
+      "snsusEast1TestSNS": {
+        "name": "snsusEast1TestSNS",
+        "type": "SNS",
         "config": {
-          "mode": 1,
-          "operation": "get",
-          "table": {
-            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest",
-            "name": "hirutest",
-            "partitionKey": "price",
-            "partitionKeyType": "S",
-            "hasSortKey": true,
-            "sortKey": "colour",
-            "sortKeyType": "S",
-            "payPerRequest": true,
-            "mode": 1,
-            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest/stream/2020-01-02T08:32:20.233"
-          },
-          "isGlobalEditMode": false,
-          "parameters": {
-            "Key": {
-              "price": "1",
-              "colour": "2"
-            },
-            "Item": {},
-            "ExpressionAttributeValues": {}
-          },
-          "triggerParams": {},
-          "validator": {
-            "validatableFields": {},
-            "validity": true
-          },
-          "valid": true
+          "topicMode": 1,
+          "topicName": "TestSNS",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:TestSNS",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "subscriptions": []
         }
       }
     },
@@ -167,7 +112,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582806203501
+    "lastSave": 1582806691007
   },
   "VCS_STATE": {
     "provider": "GitHub",
