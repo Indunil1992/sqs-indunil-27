@@ -1,19 +1,26 @@
 let AWS = require('aws-sdk');
-const sqs = new AWS.SQS();
+const ses = new AWS.SES();
 
 exports.handler = async (event) => {
+
     try {
-        let data = await sqs.deleteMessage({
-            QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/indunil-message-queue`,
-            ReceiptHandle: "gt"
+        let data = await ses.sendEmail({
+            Source: "indunil@adroitlogic.com",
+            Destination: {
+                ToAddresses: ['indunil@adroitlogic.com']
+            },
+            Message: {
+                Subject: {
+                    Data: "lp"
+                },
+                Body: {
+                    Text: {}
+                }
+            }
         }).promise();
-        console.log("data");
-                console.log(data);
-                
+
     } catch (err) {
         // error handling goes here
-                console.log("err");
-                console.log(err);
     };
 
     return { "message": "Successfully executed" };

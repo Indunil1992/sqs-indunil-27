@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "lambdasqs.js",
         "cursor": {
-          "lineNumber": 12,
-          "column": 17
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,10 +23,8 @@
         },
         "triggers": [
           {
-            "resourceName": "sqsmyMessageQueue",
-            "config": {
-              "BatchSize": "10"
-            }
+            "resourceName": "apigusEast1sachithraAPIname1111get",
+            "config": {}
           }
         ],
         "testCases": {
@@ -45,46 +43,49 @@
     ],
     "currentFileId": "4d4e9fe3-6b87-40d4-b9b6-1eafcdccb2e6",
     "resources": {
-      "sqsmyMessageQueue": {
-        "name": "sqsmyMessageQueue",
-        "type": "SQS",
+      "apigusEast1sachithraAPIname1111get": {
+        "name": "apigusEast1sachithraAPIname1111get",
+        "type": "API_GATEWAY",
         "config": {
-          "mode": 1,
-          "existing": true,
-          "name": "my-message-queue",
-          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/my-message-queue",
           "selectedRegion": "us-east-1",
-          "deliveryDelay": "0",
-          "deliveryDelayUnit": "seconds",
-          "queueType": "standardQueue",
-          "defaultVisibilityTimeout": "30",
-          "defaultVisibilityTimeoutUnit": "seconds",
-          "messageRetentionPeriod": "345600",
-          "messageRetentionPeriodUnit": "seconds",
-          "maximumMessageSize": 256,
-          "receiveMessageWaitTime": "0",
-          "queueARN": "arn:aws:sqs:us-east-1:318300609668:my-message-queue"
+          "apiMode": 1,
+          "apiName": "sachithraAPIname",
+          "apiId": "052p9kjn18",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "zrjp6rdv3b",
+          "existingResources": {
+            "/1111": "0rjsnt",
+            "/": "zrjp6rdv3b"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/1111",
+          "resourceName": "1111",
+          "resourceId": "0rjsnt",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test11",
+          "stageDeploymentId": "ebpxo0",
+          "mode": 1
         }
       },
-      "sqsindunilMessageQueue": {
-        "name": "sqsindunilMessageQueue",
-        "type": "SQS",
+      "ses-indunil@adroitlogic.com": {
+        "name": "ses-indunil@adroitlogic.com",
+        "type": "SES",
         "config": {
-          "mode": 1,
-          "existing": true,
-          "name": "indunil-message-queue",
-          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/indunil-message-queue",
-          "selectedRegion": "us-east-1",
-          "deliveryDelay": "0",
-          "deliveryDelayUnit": "seconds",
-          "queueType": "standardQueue",
-          "defaultVisibilityTimeout": "30",
-          "defaultVisibilityTimeoutUnit": "seconds",
-          "messageRetentionPeriod": "345600",
-          "messageRetentionPeriodUnit": "seconds",
-          "maximumMessageSize": 256,
-          "receiveMessageWaitTime": "0",
-          "queueARN": "arn:aws:sqs:us-east-1:318300609668:indunil-message-queue"
+          "selectedIdentity": "indunil@adroitlogic.com",
+          "projectRegion": "us-east-1",
+          "params": {
+            "to": "indunil@adroitlogic.com",
+            "cc": "",
+            "bcc": "",
+            "subject": "lp",
+            "body": {
+              "text": "",
+              "html": ""
+            }
+          }
         }
       }
     },
@@ -122,7 +123,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582802004641
+    "lastSave": 1582802359180
   },
   "VCS_STATE": {
     "provider": "GitHub",
