@@ -78,13 +78,8 @@
           "projectRegion": "us-east-1",
           "params": {
             "to": "indunil@adroitlogic.com",
-            "cc": "",
-            "bcc": "",
             "subject": "lp",
-            "body": {
-              "text": "",
-              "html": ""
-            }
+            "body": {}
           }
         }
       }
@@ -123,7 +118,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582802359180
+    "lastSave": 1582802667310
   },
   "VCS_STATE": {
     "provider": "GitHub",
