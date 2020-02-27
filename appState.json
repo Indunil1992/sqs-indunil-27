@@ -23,8 +23,10 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1sachithraAPIname1111get",
-            "config": {}
+            "resourceName": "sqsindunilfifo",
+            "config": {
+              "BatchSize": "10"
+            }
           }
         ],
         "testCases": {
@@ -43,44 +45,24 @@
     ],
     "currentFileId": "4d4e9fe3-6b87-40d4-b9b6-1eafcdccb2e6",
     "resources": {
-      "apigusEast1sachithraAPIname1111get": {
-        "name": "apigusEast1sachithraAPIname1111get",
-        "type": "API_GATEWAY",
+      "sqsindunilfifo": {
+        "name": "sqsindunilfifo",
+        "type": "SQS",
         "config": {
+          "mode": 0,
+          "existing": false,
+          "name": "indunil.fifo",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/indunil.fifo",
           "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "sachithraAPIname",
-          "apiId": "052p9kjn18",
-          "endpointType": "REGIONAL",
-          "rootResourceId": "zrjp6rdv3b",
-          "existingResources": {
-            "/1111": "0rjsnt",
-            "/": "zrjp6rdv3b"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/1111",
-          "resourceName": "1111",
-          "resourceId": "0rjsnt",
-          "restMethod": "GET",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "test11",
-          "stageDeploymentId": "ebpxo0",
-          "mode": 1
-        }
-      },
-      "ses-indunil@adroitlogic.com": {
-        "name": "ses-indunil@adroitlogic.com",
-        "type": "SES",
-        "config": {
-          "selectedIdentity": "indunil@adroitlogic.com",
-          "projectRegion": "us-east-1",
-          "params": {
-            "to": "indunil@adroitlogic.com",
-            "subject": "lp",
-            "body": {}
-          }
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "fifoQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "345600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0"
         }
       }
     },
@@ -118,7 +100,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582802667310
+    "lastSave": 1582803900579
   },
   "VCS_STATE": {
     "provider": "GitHub",
