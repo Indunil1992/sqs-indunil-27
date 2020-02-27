@@ -21,7 +21,16 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "s3induniltrigger",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ],
         "testCases": {
           "624f8084-3bb6-49a0-8b34-26ddc6df19a6": {
             "id": "624f8084-3bb6-49a0-8b34-26ddc6df19a6",
@@ -46,6 +55,38 @@
           "bucket": {
             "region": "us-east-1",
             "name": "as2-test-lahiru"
+          }
+        }
+      },
+      "sqsindunilMessageQueue": {
+        "name": "sqsindunilMessageQueue",
+        "type": "SQS",
+        "config": {
+          "mode": 1,
+          "existing": true,
+          "name": "indunil-message-queue",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/indunil-message-queue",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "standardQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "345600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0",
+          "queueARN": "arn:aws:sqs:us-east-1:318300609668:indunil-message-queue"
+        }
+      },
+      "s3induniltrigger": {
+        "name": "s3induniltrigger",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "indunil.trigger"
           }
         }
       }
@@ -84,7 +125,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582805132346
+    "lastSave": 1582805652682
   },
   "VCS_STATE": {
     "provider": "GitHub",
